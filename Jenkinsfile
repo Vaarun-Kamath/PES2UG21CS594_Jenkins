@@ -5,9 +5,6 @@ pipeline{
       steps{
         sh 'g++ main/hello.cpp -o out'
         echo 'File compiled successfully!'
-        failure{
-          echo "Pipeline Failed!"
-        }
       }
     }
     stage('Test'){
