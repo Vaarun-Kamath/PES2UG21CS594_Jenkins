@@ -5,10 +5,8 @@ pipeline{
       steps{
         sh 'g++ main/hello.cpp -o out'
         echo 'File compiled successfully!'
-        post{
-          failure{
-            echo "Pipeline Failed!"
-          }
+        failure{
+          echo "Pipeline Failed!"
         }
       }
     }
